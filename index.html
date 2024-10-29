@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نرم‌افزار بهینه‌سازی مسیر حمل‌ونقل</title>
+    <title>بهینه‌سازی مسیر حمل‌ونقل</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -26,64 +26,61 @@
 
         <form id="routeForm" class="p-4 rounded shadow-lg custom-form">
             <!-- نوع بارگیر -->
-            <label for="truckType">نوع بارگیر:</label>
+            <label for="truckType" class="text-light">نوع بارگیر:</label>
             <div id="truckType" class="mb-3 custom-checkbox">
-                <input type="checkbox" value="کفی"> کفی 
-                <input type="checkbox" value="چادری"> چادری 
-                <input type="checkbox" value="یخچالی"> یخچالی 
-                <input type="checkbox" value="تانکر"> تانکر 
-                <input type="checkbox" value="کمپرسی"> کمپرسی 
+                <input type="checkbox" value="کفی" id="truckType1"> <label for="truckType1" class="text-light">کفی</label>
+                <input type="checkbox" value="چادری" id="truckType2"> <label for="truckType2" class="text-light">چادری</label>
+                <input type="checkbox" value="یخچالی" id="truckType3"> <label for="truckType3" class="text-light">یخچالی</label>
+                <input type="checkbox" value="تانکر" id="truckType4"> <label for="truckType4" class="text-light">تانکر</label>
+                <input type="checkbox" value="کمپرسی" id="truckType5"> <label for="truckType5" class="text-light">کمپرسی</label>
             </div>
 
             <!-- نوع بار -->
-            <label for="cargoType">نوع بار:</label>
+            <label for="cargoType" class="text-light">نوع بار:</label>
             <div id="cargoType" class="mb-3 custom-checkbox">
-                <input type="checkbox" value="کشاورزی"> کشاورزی
-                <input type="checkbox" value="دامی غذایی"> دامی غذایی
-                <input type="checkbox" value="فلزی ساختمانی معدنی"> فلزی ساختمانی معدنی
-                <input type="checkbox" value="محصولات سبک"> محصولات سبک
-                <input type="checkbox" value="ماشین آلات"> ماشین آلات
-                <input type="checkbox" value="مواد شیمیایی"> مواد شیمیایی
-                <input type="checkbox" value="کاغذ و چوب"> کاغذ و چوب
-                <input type="checkbox" value="منسوجات و چرم"> منسوجات و چرم
-                <input type="checkbox" value="خرده بار"> خرده بار
-                <input type="checkbox" value="ضایعات"> ضایعات
+                <input type="checkbox" value="کشاورزی" id="cargoType1"> <label for="cargoType1" class="text-light">کشاورزی</label>
+                <input type="checkbox" value="دامی غذایی" id="cargoType2"> <label for="cargoType2" class="text-light">دامی غذایی</label>
+                <input type="checkbox" value="فلزی ساختمانی معدنی" id="cargoType3"> <label for="cargoType3" class="text-light">فلزی ساختمانی معدنی</label>
+                <input type="checkbox" value="محصولات سبک" id="cargoType4"> <label for="cargoType4" class="text-light">محصولات سبک</label>
+                <input type="checkbox" value="ماشین آلات" id="cargoType5"> <label for="cargoType5" class="text-light">ماشین آلات</label>
+                <input type="checkbox" value="مواد شیمیایی" id="cargoType6"> <label for="cargoType6" class="text-light">مواد شیمیایی</label>
+                <input type="checkbox" value="کاغذ و چوب" id="cargoType7"> <label for="cargoType7" class="text-light">کاغذ و چوب</label>
+                <input type="checkbox" value="منسوجات و چرم" id="cargoType8"> <label for="cargoType8" class="text-light">منسوجات و چرم</label>
+                <input type="checkbox" value="خرده بار" id="cargoType9"> <label for="cargoType9" class="text-light">خرده بار</label>
+                <input type="checkbox" value="ضایعات" id="cargoType10"> <label for="cargoType10" class="text-light">ضایعات</label>
             </div>
 
             <!-- استان مبدأ -->
-            <label for="province">استان مبدأ:</label>
+            <label for="province" class="text-light">استان مبدأ:</label>
             <select id="province" class="form-select mb-3 custom-select">
                 <option value="تهران">تهران</option>
                 <option value="اصفهان">اصفهان</option>
                 <option value="خراسان رضوی">خراسان رضوی</option>
                 <option value="فارس">فارس</option>
                 <option value="آذربایجان شرقی">آذربایجان شرقی</option>
-                <option value="آذربایجان غربی">آذربایجان غربی</option>
-                <option value="قم">قم</option>
-                <option value="کرمان">کرمان</option>
-                <option value="گلستان">گلستان</option>
-                <option value="گیلان">گیلان</option>
                 <option value="مازندران">مازندران</option>
+                <option value="گیلان">گیلان</option>
                 <option value="هرمزگان">هرمزگان</option>
-                <option value="لرستان">لرستان</option>
                 <option value="خوزستان">خوزستان</option>
-                <option value="چهارمحال و بختیاری">چهارمحال و بختیاری</option>
-                <option value="بوشهر">بوشهر</option>
-                <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
-                <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
-                <option value="سمنان">سمنان</option>
-                <option value="یزد">یزد</option>
-                <option value="کردستان">کردستان</option>
+                <option value="لرستان">لرستان</option>
                 <option value="زنجان">زنجان</option>
-                <option value="همدان">همدان</option>
-                <option value="مرکزی">مرکزی</option>
-                <option value="خراسان شمالی">خراسان شمالی</option>
+                <option value="کرمان">کرمان</option>
+                <option value="سمنان">سمنان</option>
+                <option value="چهارمحال و بختیاری">چهارمحال و بختیاری</option>
+                <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
+                <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
+                <option value="قم">قم</option>
+                <option value="اردبیل">اردبیل</option>
+                <option value="بوشهر">بوشهر</option>
                 <option value="ایلام">ایلام</option>
-                <option value="البرز">البرز</option>
+                <option value="سمنان">سمنان</option>
+                <option value="کرمانشاه">کرمانشاه</option>
+                <option value="خراسان شمالی">خراسان شمالی</option>
+                <option value="خراسان جنوبی">خراسان جنوبی</option>
             </select>
 
             <!-- وزن محموله -->
-            <label for="weight">وزن محموله:</label>
+            <label for="weight" class="text-light">وزن محموله:</label>
             <select id="weight" class="form-select mb-4 custom-select">
                 <option value="under22">زیر ۲۲ تن</option>
                 <option value="22to28">۲۲ تا ۲۸ تن</option>
