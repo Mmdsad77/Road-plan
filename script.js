@@ -2,7 +2,7 @@
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.getElementById("loadingScreen").style.display = "none";
-    }, 2000); // نمایش انیمیشن بارگذاری برای ۲ ثانیه
+    }, 1000); // نمایش انیمیشن بارگذاری برای ۱ ثانیه
 });
 
 const routeForm = document.getElementById("routeForm");
@@ -17,6 +17,6 @@ routeForm.addEventListener("submit", function (e) {
     // شبیه‌سازی پردازش داده‌ها
     setTimeout(() => {
         processingMessage.classList.add("d-none");
-        alert("بهترین مسیر با موفقیت محاسبه شد!");
-    }, 1500); // شبیه‌سازی پردازش به مدت ۱.۵ ثانیه
+        alert("بهترین مسیر با موفقیت محاسبه شد!"); // پیام موفقیت
+    }, 2000); // شبیه‌سازی پردازش به مدت ۲ ثانیه
 });
