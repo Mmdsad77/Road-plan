@@ -1,0 +1,136 @@
+body {
+    font-family: 'Vazir', sans-serif;
+    direction: rtl;
+    background-image: url('background.jpg'); /* تصویر پس‌زمینه خود را اینجا قرار دهید */
+    background-size: cover; /* پوشش کامل پس‌زمینه */
+    background-position: center; /* موقعیت پس‌زمینه در مرکز */
+    color: #fff; /* رنگ متن پیش‌فرض سفید */
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.7); /* رنگ پس‌زمینه فرم به آبی تیره */
+    border-radius: 15px;
+    padding: 30px; /* padding برای فاصله داخلی */
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.custom-form {
+    background: rgba(0, 0, 0, 0.6); /* رنگ پس‌زمینه فرم به خاکستری تیره */
+    border: 1px solid #ddd;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    color: #fff; /* رنگ متن داخل فرم */
+}
+
+.custom-checkbox input {
+    margin: 10px;
+    accent-color: #007bff;
+}
+
+/* تغییر رنگ متن نوع بارگیر و نوع بار به سفید */
+.custom-checkbox label {
+    color: #fff; /* رنگ سفید */
+}
+
+.custom-select {
+    background-color: #f8f9fa;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    border-radius: 0;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+
+.btn-animated {
+    background-color: #007bff;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-animated:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-animation {
+    text-align: center;
+    color: #fff;
+}
+
+.truck {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #007bff;
+    margin: 0 auto;
+    border-radius: 5px;
+    animation: drive 2s infinite;
+}
+
+.truck .wheel {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+    animation: rotate 1s infinite linear;
+}
+
+.truck .wheel:first-child {
+    left: 5px;
+}
+
+.truck .wheel:last-child {
+    right: 5px;
+}
+
+@keyframes drive {
+    0% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.processing-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
