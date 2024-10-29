@@ -1,18 +1,20 @@
 body {
     font-family: 'Vazir', sans-serif;
     direction: rtl;
-    background-image: url('background.jpg'); /* تصویر پس‌زمینه خود را اینجا قرار دهید */
-    background-size: cover; /* پوشش کامل پس‌زمینه */
-    background-position: center; /* موقعیت پس‌زمینه در مرکز */
-    color: #fff; /* رنگ متن پیش‌فرض سفید */
+    background: url('https://example.com/your-background-image.jpg') no-repeat center center fixed; /* جایگزین با URL تصویر پس‌زمینه مناسب */
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    max-width: 700px;
+    max-width: 600px;
     margin: 20px auto;
-    background: rgba(0, 0, 0, 0.7); /* رنگ پس‌زمینه فرم به آبی تیره */
+    background-color: rgba(0, 0, 0, 0.7); /* پس‌زمینه تیره برای فرم */
     border-radius: 15px;
-    padding: 30px; /* padding برای فاصله داخلی */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -20,42 +22,39 @@ h1 {
 }
 
 .custom-form {
-    background: rgba(0, 0, 0, 0.6); /* رنگ پس‌زمینه فرم به خاکستری تیره */
-    border: 1px solid #ddd;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
-    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
     border-radius: 15px;
-    color: #fff; /* رنگ متن داخل فرم */
 }
 
 .custom-checkbox input {
     margin: 10px;
-    accent-color: #007bff;
+    accent-color: #fff; /* رنگ انتخاب checkbox */
 }
 
-/* تغییر رنگ متن نوع بارگیر و نوع بار به سفید */
 .custom-checkbox label {
-    color: #fff; /* رنگ سفید */
+    color: #fff; /* رنگ متن گزینه‌ها */
+    margin-left: 5px;
 }
 
 .custom-select {
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff; /* رنگ متن انتخاب */
     border: none;
-    border-bottom: 2px solid #007bff;
     border-radius: 0;
-    font-weight: 500;
     padding: 8px 12px;
 }
 
 .btn-animated {
-    background-color: #007bff;
+    background-color: #4CAF50; /* رنگ دکمه */
     font-weight: bold;
     border-radius: 25px;
     transition: all 0.3s ease;
+    color: #fff; /* رنگ متن دکمه */
 }
 
 .btn-animated:hover {
-    background-color: #0056b3;
+    background-color: #45a049; /* رنگ دکمه در حالت hover */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
@@ -85,7 +84,7 @@ h1 {
     background-color: #007bff;
     margin: 0 auto;
     border-radius: 5px;
-    animation: drive 2s infinite;
+    animation: drive 1s infinite; /* کاهش زمان انیمیشن */
 }
 
 .truck .wheel {
@@ -95,7 +94,7 @@ h1 {
     border-radius: 50%;
     position: absolute;
     bottom: -5px;
-    animation: rotate 1s infinite linear;
+    animation: rotate 0.5s infinite linear; /* کاهش زمان چرخش */
 }
 
 .truck .wheel:first-child {
@@ -108,13 +107,13 @@ h1 {
 
 @keyframes drive {
     0% {
-        transform: translateX(-20px);
+        transform: translateX(-10px); /* کاهش حرکت */
     }
     50% {
-        transform: translateX(20px);
+        transform: translateX(10px); /* کاهش حرکت */
     }
     100% {
-        transform: translateX(-20px);
+        transform: translateX(-10px); /* کاهش حرکت */
     }
 }
 
